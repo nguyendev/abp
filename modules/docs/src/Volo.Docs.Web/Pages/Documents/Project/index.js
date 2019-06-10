@@ -108,6 +108,15 @@
 
         initSocialShareLinks();
 
+        $("#languageSwitch").change(function () {
+            var _this = $(this);
+            var result = /^\/([A-Za-z0-9-]+)\//.exec(_this.val());
+            if (result && result.length === 2) {
+                var language = result[1];
+                location.href = "/Abp/Languages/Switch?culture=" + language + "&uiCulture=" + language + "&returnUrl=" + _this.val();
+            }
+        });
+
     });
 
 })(jQuery);

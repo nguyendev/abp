@@ -161,7 +161,7 @@
                     <div class="float-right">
                         @if (Model.LanguageSelectListItems.Count > 1)
                         {
-                                <select asp-items="Model.LanguageSelectListItems" class="mr-2" onchange="window.location.replace(this.value)"></select>
+                                <select asp-items="Model.LanguageSelectListItems" class="mr-2" id="languageSwitch"></select>
                         }
 
                         @if (!string.IsNullOrEmpty(Model.Document.EditLink))
